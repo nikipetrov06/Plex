@@ -1,0 +1,10 @@
+ALTER TABLE `movies`
+    CHANGE COLUMN `title` `title` VARCHAR(100) NULL DEFAULT NULL,
+    CHANGE COLUMN `description` `description` MEDIUMTEXT NULL DEFAULT NULL,
+    CHANGE COLUMN `director` `director` VARCHAR(100) NULL DEFAULT NULL,
+    CHANGE COLUMN `writer` `writer` VARCHAR(100) NULL DEFAULT NULL,
+    CHANGE COLUMN `stars` `stars` VARCHAR(100) NULL DEFAULT NULL,
+    CHANGE COLUMN `imdb_id` `imdb_id` VARCHAR(100) NULL DEFAULT NULL,
+    CHANGE COLUMN `audio` `audio` VARCHAR(200) NULL DEFAULT NULL,
+    CHANGE COLUMN `subtitles` `subtitles` VARCHAR(200) NULL DEFAULT NULL,
+    ADD INDEX `title_year_idx` (`title` ASC, `year` ASC);

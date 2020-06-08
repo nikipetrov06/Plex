@@ -1,0 +1,8 @@
+spring:
+  primary-datasource:
+    jdbcUrl: jdbc:mysql://localhost:3306/nikolaykpetrov?createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: ENC(Jqrul/bz3o6Gs+JHrZNpHlqFIbXrH/IV)
+    password: ENC(GVYHaP0NeTmjq0Ug0oPy5ZGZIoFh1+iU)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    builder-package: com.scalefocus.java.plexnikolaypetrov.entities.primary
+    builder-persistence-unit: primaryDb

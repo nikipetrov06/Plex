@@ -1,0 +1,40 @@
+server:
+  port: 8086
+
+logging:
+  pattern:
+    console: '%-5level %d{yyyy-MM-dd HH:mm:ss} [%thread] %logger{36} - %msg%n'
+    file: '%-5level %d{yyyy-MM-dd HH:mm:ss} [%thread] %logger{36} - %msg%n'
+  file:
+    name: logFiles/app.log
+spring:
+  secondary-datasource:
+    jdbcUrl: jdbc:sqlite:${file.path}/plexSqlite.db
+    dialect: org.hibernate.dialect.SQLiteDialect
+    builder-package: com.scalefocus.java.plexnikolaypetrov.entities.secondary
+    builder-persistence-unit: secondaryDb
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 20
+          order_inserts: true
+          order_updates: true
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+jasypt:
+  encryptor:
+    algorithm: ${ALGORITHM}
+    password: ${PASSWORD}
+jwt:
+  secret-key: ENC(Jz4fLnyKJm27OvHGbLmSDw==)
+  expiration-hours: 10
+file:
+  path: sqlite/
+sqlite:
+  format: SQLite format 3
+  extensions: db, sqlite, sqlitedb
+library-section-ids:
+  movies: 5, 11, 24, 25, 28, 30

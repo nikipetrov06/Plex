@@ -1,0 +1,5 @@
+ALTER TABLE `users`
+    CHANGE COLUMN `id` `id` VARCHAR(36) NOT NULL ,
+    CHANGE COLUMN `name` `name` VARCHAR(20) NOT NULL ,
+    CHANGE COLUMN `email` `email` VARCHAR(50) NOT NULL ,
+    ADD COLUMN `password` VARCHAR(225) NOT NULL AFTER `name`;

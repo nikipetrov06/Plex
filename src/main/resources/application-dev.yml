@@ -1,0 +1,14 @@
+spring:
+  primary-datasource:
+    jdbcUrl: jdbc:mysql://localhost:3306/plexMySql?createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useUnicode=yes&characterEncoding=UTF-8
+    username: ENC(u8/X8f1CpLvgpU8BhQMKpw==)
+    password: ENC(f6zh8GkX/NqF2mQh8GxVYCvAsuRSkqs6)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    builder-package: com.scalefocus.java.plexnikolaypetrov.entities.primary
+    builder-persistence-unit: primaryDb
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        generate_statistics: false
+        format_sql: false
